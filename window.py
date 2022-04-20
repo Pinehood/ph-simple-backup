@@ -1,6 +1,8 @@
 from tkinter import NORMAL, DISABLED, Tk, Button, Label, filedialog, messagebox
-from fileutils import loadConfig, updateConfig, backupFile
-from constants import *
+
+from fileHandler import loadConfig, updateConfig, backupFile
+from utils.constants import *
+
 
 class Window:
   def __init__(self):
@@ -33,8 +35,11 @@ class Window:
     self.backupLocation = backupLocation
 
   def initalizeWindow(self):
+    windowX = int((self.window.winfo_screenwidth()/2) - (APPLICATION_WIDTH/2))
+    windowY = int((self.window.winfo_screenheight()/2) - (APPLICATION_HEIGHT/2))
+
     self.window.title(APPLICATION_TITLE)
-    self.window.geometry(APPLICATION_SIZE)
+    self.window.geometry(f"{APPLICATION_WIDTH}x{APPLICATION_HEIGHT}+{windowX}+{windowY}")
     self.window.resizable(0, 0)
 
   def initalizeComponents(self):

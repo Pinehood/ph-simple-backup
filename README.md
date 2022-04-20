@@ -1,5 +1,5 @@
-#PINEHOOD - Simple Backup v2
+# PINEHOOD - Simple Backup v2
 
-##How to run
+## How to run
 
 - Run command `python main.py`
