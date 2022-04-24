@@ -14,11 +14,6 @@ def stripFileExtension(file):
   return fileName
 
 
-def extractFileName(filePath):
-  fileNameParts = filePath.split("/")
-  return fileNameParts[len(fileNameParts) - 1]
-
-
 def getParentDirPath(path):
   pathParts = path.split("/")
   pathParts.pop()
